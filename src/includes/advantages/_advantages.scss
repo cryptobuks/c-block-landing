@@ -55,10 +55,27 @@ body[data-theme="light"] {
 .advantages-item {
   position: relative;
   flex-basis: 100%;
-  padding: 60px 20px 20px 20px;
   border-radius: var(--default-border-radius);
   background: var(--card-bg);
-  transition: var(--default-transition-ms) background-color, var(--default-transition-ms) color;
+  transition: var(--default-transition-ms) background, var(--default-transition-ms) color;
+
+  &--link {
+    display: inherit;
+    padding: 60px 20px 20px 20px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: calc(-92px / 2);
+      left: calc(50% - 92px / 2);
+      display: block;
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      background: var(--card-bg-before);
+      transition: inherit;
+    }
+  }
 
   &--title, &--description {
     text-align: center;
@@ -78,19 +95,6 @@ body[data-theme="light"] {
 
   &:not(:last-child) {
     margin-bottom: 60px;
-  }
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: calc(-92px / 2);
-    left: calc(50% - 92px / 2);
-    display: block;
-    width: 92px;
-    height: 92px;
-    border-radius: 50%;
-    background: var(--card-bg-before);
-    transition: inherit;
   }
 
   &--img {
@@ -167,7 +171,17 @@ body[data-theme="light"] {
 
     flex-basis: calc(33.333% - #{$divValue});
     align-self: stretch;
-    padding: 80px 20px 40px 20px;
+
+    &--link {
+      padding: 80px 20px 40px 20px;
+
+      &:before {
+        top: -65px;
+        left: calc(50% - 65px);
+        width: 130px;
+        height: 130px;
+      }
+    }
 
     &:nth-child(odd) {
       margin-right: 0;
@@ -200,13 +214,6 @@ body[data-theme="light"] {
       svg {
         transform: scale(1.2);
       }
-    }
-
-    &:before {
-      top: -65px;
-      left: calc(50% - 65px);
-      width: 130px;
-      height: 130px;
     }
 
     &--title {

@@ -1,14 +1,26 @@
+-
+  var links = [
+    {
+      to: 'https://mobile.twitter.com/cblock_io',
+      icon: 'icon-twitter',
+    },
+    {
+      to: 'https://www.linkedin.com/company/c-block-io/',
+      icon: 'icon-linkedin',
+    },
+    {
+      to: 'https://discord.gg/mwyjGaPs',
+      icon: 'icon-discord',
+    },
+    {
+      to: '#',
+      icon: 'icon-telegram',
+    },
+  ]
+
 mixin socialLinks(className)
   ul(class=`social-links ${className}`)
-    li.social-link
-      a(href="#" target="_blank")
-        i.icon-twitter
-    li.social-link
-      a(href="#" target="_blank")
-        i.icon-linkedin
-    li.social-link
-      a(href="#" target="_blank")
-        i.icon-discord
-    li.social-link
-      a(href="#" target="_blank")
-        i.icon-telegram
+    each item in links
+      li.social-link
+        a(href=item.to target="_blank")
+          i(class=item.icon)

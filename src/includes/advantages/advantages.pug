@@ -2,6 +2,7 @@
   var advantages = [
     {
       title: 'Token Contract',
+      link: 'https://app.c-block.io/create-contract/token-contract',
       description: 'Create your own token for any purpose.',
       img: `
         <svg width="40" height="49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -17,6 +18,7 @@
     },
     {
       title: 'Crowdsale Contract',
+      link: 'https://app.c-block.io/create-contract/crowdsale-contract',
       description: 'Crowdsale smart contract for token distribution.',
       img: `
         <svg width="49" height="49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,6 +36,7 @@
     },
     {
       title: 'Will Contract',
+      link: 'https://app.c-block.io/create-contract/will-contract',
       description: 'Transfers person’s savings to his family or friends in the event of his sudden illness or death.',
       img: `
         <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,6 +57,7 @@
     },
     {
       title: 'Lost Key Contract',
+      link: 'https://app.c-block.io/create-contract/lostkey-contract',
       description: 'Provides digital assets transfer in case of a private key loss.',
       img: `
         <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -75,6 +79,7 @@
     },
     {
       title: 'Wedding Contract',
+      link: 'https://app.c-block.io/create-contract/wedding-contract',
       description: 'Smart contract for spouses planning their future together.',
       img: `
         <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -95,6 +100,7 @@
     },
     {
       title: 'Airdrop contract',
+      link: 'https://app.c-block.io/custom-development',
       description: 'Distribution of tokens among hundreds or thousands of users. ',
       img: `
         <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,6 +121,7 @@
     },
     {
       title: 'Custom Contract',
+      link: 'https://app.c-block.io/custom-development',
       description: 'We will develop and deploy any smart contract, just provide us with your requirments.',
       img: `
         <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -147,8 +154,9 @@ section.section.advantages
     ul.advantages-list
       each item in advantages
         li.advantages-item
-          div.advantages-item--img!= item.img
+          a.advantages-item--link(href=item.link) 
+            div.advantages-item--img!= item.img
 
-          h4.advantages-item--title
-            span.primary-text-fill= item.title
-          p.advantages-item--description= item.description
+            h4.advantages-item--title
+              span.primary-text-fill= item.title
+            p.advantages-item--description= item.description

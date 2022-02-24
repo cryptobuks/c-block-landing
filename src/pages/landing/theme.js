@@ -1,5 +1,5 @@
 function detectTheme() {
-  let theme = 'light';
+  let theme = 'dark';
   const themeFromLocalStorage = localStorage.getItem('theme');
 
   if (themeFromLocalStorage) {
