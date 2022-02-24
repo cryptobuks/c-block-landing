@@ -4,18 +4,28 @@
       img: './images/team-1.png',
       name: 'Tadii Tendayi',
       position: 'Founder & CEO',
-      linkedin: '#',
-      twitter: '#',
-      medium: '#',
+      socials: [
+        {
+          link: 'https://www.linkedin.com/in/tadiitendayi/',
+          icon: 'icon-linkedin',
+        },
+        {
+          link: 'https://twitter.com/bitflexjack',
+          icon: 'icon-twitter',
+        },
+      ],
       about: 'An adaptable and customer-oriented cryptopreneur who shares the Celo vision that values people and changing lives. Founder of BitFlex FinTech and a core contributor of Bankless Africa.'
     },
     {
       img: './images/team-2.png',
       name: 'Patrick Norton',
       position: 'Co-Founder',
-      linkedin: '#',
-      twitter: '#',
-      medium: '#',
+      socials: [
+        {
+          link: 'https://www.linkedin.com/in/patrick-norton-16440b35/',
+          icon: 'icon-linkedin',
+        }
+      ],
       about: 'A crypto enthusiast with a passion for pets, humanity and the blockchain ecosystem.'
     },
   ];
@@ -35,15 +45,10 @@ section.section.team
             span.primary-text-fill= member.name
           span.team-member--position= member.position
           ul.team-member--social
-            li.team-member--social-item
-              a(href=member.linkedin target="_blank" class="team-member--social-link")
-                i.icon-linkedin
-            li.team-member--social-item
-              a(href=member.twitter target="_blank" class="team-member--social-link")
-                i.icon-twitter
-            li.team-member--social-item
-              a(href=member.medium target="_blank" class="team-member--social-link")
-                i.icon-medium
+            each social in member.socials
+              li.team-member--social-item
+                a(href=social.link target="_blank" class="team-member--social-link")
+                  i(class=social.icon)
           p.team-member--about= member.about
 
 
