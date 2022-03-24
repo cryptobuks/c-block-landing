@@ -11,6 +11,10 @@
 @import "../../components/logo/logo";
 @import "../../includes/background/background";
 
+main {
+  overflow: hidden;
+}
+
 .container {
   @include for-desktop {
     width: 100%;
