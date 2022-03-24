@@ -57,9 +57,11 @@ export const server = () => {
   sync.init({
     ui: false,
     notify: false,
+    open: false,
     server: {
       baseDir: 'dist',
-    }
+    },
+    port: process.env.PORT || 3000,
   });
 };
 
