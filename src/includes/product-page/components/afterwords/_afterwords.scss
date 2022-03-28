@@ -51,6 +51,8 @@ body[data-theme="light"] {
         top: 40%;
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
+        user-select: none;
+        pointer-events: none;
 
         @include for-desktop-sm {
             width: 315px;
@@ -63,6 +65,8 @@ body[data-theme="light"] {
         top: 40%;
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
+        user-select: none;
+        pointer-events: none;
     }
 
     &__social-links {
