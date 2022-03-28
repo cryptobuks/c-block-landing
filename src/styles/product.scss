@@ -1,0 +1,177 @@
+@import "./mixins";
+@import "../includes/header/header";
+@import "../components/socialLinks/socialLinks";
+@import "../components/langSwitcher/langSwitcher";
+@import "../components/logo/logo";
+@import "../includes/product-page/components/background/background";
+@import "../includes/product-page/components/preview/preview";
+@import "../includes/product-page/components/contracts/contracts";
+@import "../includes/product-page/components/roadmap/roadmap";
+@import "../includes/product-page/components/phones/phones";
+@import "../includes/product-page/components/advantages/advantages";
+@import "../includes/product-page/components/afterwords/afterwords";
+@import "../includes/product-page/components/footer/footer";
+
+@mixin dark {
+    // override header switcher & button colors
+    --switcher-bg: var(--color-black);
+    --desktop-nav-bg: var(--color-black);
+    --theme-btn-bg: var(--color-black);
+    --switcher-border: var(--primary-gradient);
+
+    // some other blocks
+    --phones-text-title-color: var(--gradient-1);
+    --phones-text-description-color: var(--color-grey-4);
+
+    --bordered-block-bg: var(--color-grey-5);
+    --bordered-block-border-color: var(--color-grey-8);
+    --success-icon-bg: var(--color-green-4);
+
+    --section-description: var(--color-white-9);
+    --footer-logo: url(#logo-gradient-dark);
+    --footer-text-color: var(--color-white-9);
+    --footer-social-bg: var(--gradient-1);
+}
+
+@mixin light {
+    // override header switcher & button colors
+    --switcher-bg: var(--color-black);
+    --desktop-nav-bg: var(--color-black);
+    --theme-btn-bg: var(--color-black);
+    --switcher-border: var(--primary-gradient);
+
+    // some other blocks
+    --phones-text-title-color: var(--color-grey-6);
+    --phones-text-description-color: var(--color-grey-9);
+
+    --bordered-block-bg: var(--color-white-10);
+    --bordered-block-border-color: var(--color-white-7);
+    --success-icon-bg: var(--color-grey-6);
+
+    --section-description: var(--color-grey-9);
+    --footer-logo: var(--color-grey-6);
+    --footer-text-color: var(--color-grey-9);
+    --footer-social-bg: var(--color-grey-6);
+}
+
+body {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    background: var(--product-body-bg);
+
+    &[data-theme="light"] {
+        @include light;
+    }
+
+    &[data-theme="dark"] {
+        @include dark;
+    }
+}
+
+.header {
+    @include for-desktop-sm {
+        top: 28px;
+    }
+}
+
+// ---------- Typography ----------
+.text-14-400 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+}
+
+.text-16-400 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+}
+
+.text-18-500 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.text-20-700 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 21.74px;
+}
+
+.text-24-400-32 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.text-24-400-48 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 48px;
+}
+
+.text-32-400 {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+}
+
+.text-36-400 {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+}
+
+.text-56-400 {
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 66px;
+}
+
+// ---------- Specific Styles ----------
+.container {
+    @include for-desktop {
+        width: 100%;
+        max-width: 1100px;
+    }
+
+    width: 95%;
+    margin: 0 auto;
+}
+
+.section {
+    @include for-desktop-sm {
+        margin-bottom: 150px;
+    }
+
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+body[data-theme="dark"] {
+    .section-title {
+        background-image: var(--primary-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+body[data-theme="light"] {
+    .section-title {
+        color: var(--color-grey-6);
+    }
+}
+
+.bordered-block {
+    & {
+        padding: 24px;
+        border-radius: 20px;
+        background: var(--bordered-block-bg);
+        border: 1px solid var(--bordered-block-border-color);
+    }
+}

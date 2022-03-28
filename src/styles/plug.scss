@@ -1,0 +1,26 @@
+@import "./mixins";
+
+body {
+    font-family: "Exo", Arial, Helvetica, sans-serif;
+}
+
+.plug {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgba(0, 0, 0, 1);
+}
+
+.plug-title {
+    font-size: 70px;
+    text-align: center;
+}
+
+.plug-logo {
+    display: block;
+    width: 225px;
+    margin-bottom: 35px;
+    pointer-events: none;
+}

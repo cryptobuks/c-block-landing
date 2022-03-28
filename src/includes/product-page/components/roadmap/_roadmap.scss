@@ -1,0 +1,217 @@
+body[data-theme="dark"] {
+    .roadmap-card__title {
+        background-image: var(--primary-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .roadmap-card__link {
+        color: var(--color-green-4);
+    }
+
+    .roadmap-card__plan-name {
+        background-image: var(--primary-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .roadmap-card__plan-text {
+        color: var(--color-grey-4);
+    }
+}
+
+body[data-theme="light"] {
+    .roadmap-card__title {
+        color: var(--color-grey-6)
+    }
+
+    .roadmap-card__link {
+        color: var(--color-grey-6);
+    }
+
+    .roadmap-card__plan-name {
+        color: var(--color-grey-6);
+    }
+
+    .roadmap-card__plan-text {
+        color: var(--color-grey-6);
+    }
+}
+
+.roadmap-container {
+    position: relative;
+}
+
+.roadmap {
+    & {
+    }
+
+    &.section {
+        margin-bottom: 40px + 48px + 60px;
+    }
+
+    & > .section-title {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 48px;
+
+        @include for-desktop-sm {
+            margin-bottom: 23px;
+            font-size: 36px;
+        }
+    }
+
+    &>.container {
+        max-width: 350px;
+
+        @include for-desktop-sm {
+            max-width: 720px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        &:not(:last-child) {
+            margin-bottom: 100px;
+        }
+
+        @include for-desktop-sm {
+            flex-direction: row;
+            margin-bottom: 50px;
+
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+                & > :first-child {
+                    margin-left: 100px;
+                }
+            }
+
+            &:nth-child(odd) {
+                & > :first-child {
+                    margin-right: 100px;
+                }
+            }
+        }
+    }
+
+    &__item-demo {
+        position: relative;
+
+        & :first-child {
+            z-index: 1;
+            display: block;
+            width: 250px;
+            height: 522px;
+            background-color: lightblue;
+        }
+    }
+
+    &__item-demo-glow {
+        position: absolute;
+        z-index: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.roadmap-card {
+    & {
+        min-width: 350px;
+        min-height: 450px;
+
+        &:not(:last-child) {
+            margin-right: 18px;
+        }
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 48px;
+        margin-bottom: 30px;
+
+        @include for-desktop-sm {
+            font-size: 36px;
+        }
+    }
+
+    &__link {
+        text-decoration: underline;
+    }
+
+    &__plan {
+        display: flex;
+        & > :first-child {
+            margin-right: 25px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__plan-name {
+
+    }
+
+    &__plan-text {
+
+    }
+}
+
+.roadmap-slider {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+
+    &__control {
+        position: absolute;
+        top: 100%;
+
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: var(--bordered-block-bg);
+        border: 1px solid var(--bordered-block-border-color);
+
+        & > .icon-chevron:before {
+            color: var(--success-icon-bg);
+        }
+
+        @include for-desktop-sm {
+            top: 50%;
+        }
+    }
+    &__prev-arrow {
+        top: calc(100% + 40px);
+        right: 50%;
+        transform: translateX(-50%);
+
+        & > .icon-chevron:before {
+            transform: rotate(180deg);
+        }
+
+        @include for-desktop-sm {
+            top: 50%;
+            right: initial;
+            left: -44px;
+            transform: translate(-100%, -50%);
+        }
+    }
+    &__next-arrow {
+        top: calc(100% + 40px);
+        left: 50%;
+        // transform: translateX(50%);
+        @include for-desktop-sm {
+            top: 50%;
+            left: initial;
+            right: -44px;
+            transform: translate(+100%, -50%);
+        }
+    }
+}

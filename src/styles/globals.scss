@@ -1,0 +1,137 @@
+@import "./mixins";
+@import "./normalize";
+@import "./fonts";
+@import "./fontello";
+
+:root {
+    // <----- COLORS PALETTE
+    --color-black: #000000;
+
+    --color-grey-1: #25272E;
+    --color-grey-2: #373737;
+    --color-grey-3: #191919;
+    --color-grey-4: #C4C4C4; // Dark mode/Text Grey 600
+    --color-grey-5: #191A1D; // Dark mode/Blck 700
+    --color-grey-6: #2E3A59; // Light mode/Text 800
+    --color-grey-7: #111215; // product-dark-bg
+    --color-grey-8: #1E2023; // Dark mode/Blck 600
+    --color-grey-9: #6C778F; // Light mode/Grey 700
+
+    --color-white-1: #ffffff;
+    --color-white-2: #E5E5E5;
+    --color-white-3: #fbfbfb;
+    --color-white-4: #F5F5F5;
+    --color-white-5: #F0FFDA;
+    --color-white-6: #EDF3FF; // product-light-bg
+    --color-white-7: #B5BDCE; // Light mode/Gray 600_Border
+    --color-white-8: #C5CEE0;
+    --color-white-9: #F2F2F2; // Dark mode/Text Grey 500
+    --color-white-10: #DAE3F5; // Light mode/Grey 400
+
+    --color-green-1: #28B800;
+    --color-green-2: #79C70A;
+    --color-green-3: #9DDA46;
+    --color-green-4: #70FF00; // Accent/green acid
+
+    --color-yellow-1: #F5E30C;
+    --color-yellow-2: #D4FB50;
+
+    --gradient-1: linear-gradient(90deg, var(--color-green-1) -0.71%, var(--color-yellow-1) 100%);
+    --gradient-2: linear-gradient(180deg, var(--color-grey-2) 0%, var(--color-grey-3) 100%);
+    // Accent/green gradient
+    --gradient-3: linear-gradient(90deg, var(--color-green-4) 0%, var(--color-yellow-2) 100%);
+    // preview gradient
+    --gradient-4: linear-gradient(114.23deg, var(--color-green-4) 16.9%, transparent 42.46%, var(--color-green-4) 69.1%);
+    // cl_04
+    --gradient-5: linear-gradient(180deg, var(--color-grey-2) 0%, var(--color-grey-3) 100%);
+
+    // ------->
+
+    --light-bg: rgb(245, 245, 245, 0.49);
+    --default-border-radius: 40px;
+    --default-transition-ms: 0.2s;
+    --primary-gradient: var(--gradient-1);
+    --primary-color: var(--color-green-3);
+}
+
+@mixin dark {
+    --body-bg: var(--color-black);
+    --card-bg: rgba(55, 56, 57, 0.49);
+    --card-bg-before: var(--gradient-2);
+    --card-text-color: var(--color-white-1);
+    --advantage-img-bg: var(--primary-gradient);
+    --advantage-img-fill: var(--color-black);
+    --member-position-color: var(--color-white-1);
+    --social-bg: var(--gradient-2);
+    --social-color: var(--primary-color);
+    --footer-bg: var(--gradient-2);
+    --footer-social-bg: var(--gradient-1);
+    --footer-social-color: var(--color-grey-3);
+    --footer-copyright-color: var(--color-white-1);
+    --step-icon-border-color: var(--primary-color);
+    --header-nav-link-color: var(--primary-color);
+    --header-nav-link-hover-bg: #262626;
+    --header-nav-border-color: #4B4B4B;
+    --switcher-border: var(--primary-gradient);
+    --switcher-bg: var(--color-black);
+    --theme-btn-bg: var(--color-black);
+    --desktop-nav-bg: var(--color-black);
+    --preview-btn-color: var(--color-black);
+    --preview-btn-arrow-bg: var(--color-black);
+    --preview-btn-arrow-color: var(--color-white-1);
+
+    --product-body-bg: var(--color-grey-7);
+    --product-footer-border-color: var(--color-white-1);
+}
+
+@mixin light {
+    --body-bg: var(--color-white-1);
+    --card-bg: var(--light-bg);
+    --card-bg-before: var(--color-white-3);
+    --card-text-color: var(--color-black);
+    --advantage-img-bg: var(--color-white-1);
+    --advantage-img-fill: var(--color-green-2);
+    --member-position-color: rgba(0, 0, 0, 0.6);
+    --social-bg: var(--gradient-1);
+    --social-color: var(--color-white-1);
+    --footer-bg: var(--color-white-4);
+    --footer-social-bg: var(--gradient-1);
+    --footer-social-color: var(--color-white-1);
+    --footer-copyright-color: rgba(0, 0, 0, 1);
+    --step-icon-border-color: var(--color-green-2);
+    --header-nav-link-color: var(--primary-color);
+    --header-nav-link-hover-bg: var(--color-white-5);
+    --header-nav-border-color: var(--primary-color);
+    --switcher-border: var(--color-white-2);
+    --switcher-bg: var(--color-white-2);
+    --theme-btn-bg: var(--color-white-1);
+    --desktop-nav-bg: var(--color-white-1);
+    --preview-btn-color: var(--color-white-1);
+    --preview-btn-arrow-bg: var(--color-white-1);
+    --preview-btn-arrow-color: var(--color-black);
+
+    --product-body-bg: var(--color-white-6);
+    --product-footer-border-color: var(--color-grey-6);
+}
+
+body {
+    &[data-theme="light"] {
+        @include light;
+    }
+
+    &[data-theme="dark"] {
+        @include dark;
+    }
+}
+
+.primary-text-fill {
+    background-image: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+// fix fontello width
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    width: auto;
+}

@@ -6,6 +6,6 @@ body[data-theme="dark"] .logo {
 
 body[data-theme="light"] .logo {
   path {
-    fill: #79C70A;
+    fill: var(--color-green-2);
   }
 }

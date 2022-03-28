@@ -1,0 +1,40 @@
+.advantages {
+    & {
+        margin-bottom: 60px;
+        @include for-desktop-sm {
+            margin-bottom: 230px !important;
+        }
+    }
+
+    & > .section-title {
+        margin-bottom: 48px;
+    }
+
+    &__ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 24px;
+
+        @include for-tablet {
+            grid-template-columns: 2fr 2fr;
+            grid-gap: 50px;
+            padding: 30px 60px;
+        }
+    }
+
+    &__li {
+        display: flex;
+        flex-basis: 100%;
+
+        color: var(--section-description);
+    }
+
+    &__icon-success {
+        margin-top: 3px;
+        margin-right: 10px;
+
+        & > path {
+            fill: var(--success-icon-bg);
+        }
+    }
+}

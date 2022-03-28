@@ -1,0 +1,45 @@
+.footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 36px 0;
+    color: var(--footer-text-color);
+
+    &::before {
+        position: absolute;
+        top: 0;
+        content: "";
+        height: 1px;
+        width: 100%;
+        opacity: 0.2;
+        background: var(--product-footer-border-color);
+    }
+}
+
+.footer-logo {
+    width: 120px;
+    height: 40px;
+
+    &>path {
+        fill: var(--footer-logo) !important;
+    }
+}
+
+.footer-links {
+    padding-top: 25px;
+    & > :not(:last-child) {
+        margin-right: 5px;
+    }
+
+    & > a {
+        color: var(--footer-text-color);
+    }
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

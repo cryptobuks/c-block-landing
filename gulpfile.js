@@ -26,7 +26,7 @@ export const styles = () => {
     .pipe(autoprefixer({
       cascade: false,
     }))
-    .pipe(concat('index.min.css'))
+    // .pipe(concat('index.min.css'))
     .pipe(gulp.dest('dist'))
     .pipe(sync.stream());
 };

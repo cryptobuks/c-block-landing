@@ -1,0 +1,34 @@
+<svg width="261" height="528" viewBox="0 0 261 528" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="258.766" y="158.393" width="1.58371" height="60.9727" rx="0.791853" fill="#C4C4C4"/>
+<rect x="0.758789" y="106.42" width="1.85617" height="18.5617" rx="0.791853" fill="#C4C4C4"/>
+<rect x="0.758789" y="144.781" width="1.85617" height="38.3608" rx="0.791853" fill="#C4C4C4"/>
+<rect x="0.758789" y="195.516" width="1.85617" height="38.3608" rx="0.791853" fill="#C4C4C4"/>
+<rect x="5.2373" y="2.99994" width="250.77" height="521.77" rx="37.2169" stroke="url(#paint0_linear_1902_39558)" stroke-width="6"/>
+<rect x="10.4497" y="8.21228" width="240.345" height="511.345" rx="32.6233" stroke="black" stroke-width="9"/>
+<g style="mix-blend-mode:multiply">
+<rect x="202.704" y="-6.10352e-05" width="4.94978" height="3.71233" fill="#C0C0C0"/>
+</g>
+<rect x="110.273" y="4.94971" width="41.4544" height="4.33106" rx="1.7931" fill="#171718"/>
+<g style="mix-blend-mode:multiply">
+<rect x="256.218" y="52.5914" width="3.71233" height="4.94978" fill="#C0C0C0"/>
+</g>
+<g style="mix-blend-mode:multiply">
+<rect x="2.79297" y="52.5914" width="3.71233" height="4.94978" fill="#C0C0C0"/>
+</g>
+<g style="mix-blend-mode:multiply">
+<rect x="256.043" y="470.229" width="3.58283" height="4.94978" fill="#C0C0C0"/>
+</g>
+<g style="mix-blend-mode:multiply">
+<rect x="2.85596" y="470.229" width="3.58283" height="4.94978" fill="#C0C0C0"/>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M83.909 12.3744H81.4341V12.3744C81.4341 12.3744 81.4341 12.3744 81.4341 12.3744C82.7461 12.3744 83.8097 13.438 83.8097 14.75C83.8097 14.7832 83.809 14.8163 83.8077 14.8493H83.909V12.3744Z" fill="black"/>
+<path d="M83.9092 12.3744H179.192V19.8998C179.192 26.6784 173.697 32.1735 166.919 32.1735H96.1829C89.4043 32.1735 83.9092 26.6784 83.9092 19.8998V12.3744Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M179.192 12.3744H181.667V12.3744C181.667 12.3744 181.667 12.3744 181.667 12.3744C180.311 12.3744 179.209 13.47 179.192 14.828V12.3744Z" fill="black"/>
+<circle cx="96.2833" cy="19.1803" r="4.94978" fill="#171718"/>
+<defs>
+<linearGradient id="paint0_linear_1902_39558" x1="130.622" y1="-6.10352e-05" x2="130.622" y2="527.77" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3F3F3F"/>
+<stop offset="1" stop-color="#231F20"/>
+</linearGradient>
+</defs>
+</svg>

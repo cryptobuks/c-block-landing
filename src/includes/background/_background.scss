@@ -20,6 +20,8 @@ body[data-theme="light"] {
   position: relative;
   width: 100%;
   z-index: 0;
+  user-select: none;
+  pointer-events: none;
 }
 
 #bg-nodes {

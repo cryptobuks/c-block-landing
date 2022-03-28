@@ -1,0 +1,39 @@
+-
+    var phonesList = [
+        {
+            title: 'Token Contract',
+            description: 'Enables to create token for project, to specify the token distribution parameters (number of tokens, price), bonus structure, sales dates etc. and deploys into CELO itself.',
+            imgSrc: '',
+        },
+        {
+            title: 'Crowdsale Contract',
+            description: 'Enables to create token for project, to specify the token distribution parameters (number of tokens, price), bonus structure, sales dates etc. and deploys into CELO itself.',
+            imgSrc: '',
+        },
+        {
+            title: 'Lost Key Contract ',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+            imgSrc: '',
+        },
+        {
+            title: 'Will Contract',
+            description: 'Enables to create token for project, to specify the token distribution parameters (number of tokens, price), bonus structure, sales dates etc. and deploys into CELO itself.',
+            imgSrc: '',
+        },
+        {
+            title: 'Wedding Contract',
+            description: 'Smart Contract for a joint savings account. Makes managing finances easier by facilitating family budgeting and saving. Asset management is only possible with the consent of both parties. Different conditions can be set up, for example the assets withdraw may be restricted till the first 5 years of marriage expire. In case of the agreement termination the assets will be shared equally.',
+            imgSrc: '',
+        },
+    ];
+section.section.phones 
+    div.phones-container.container
+        each item in phonesList
+            div.phones__item
+                div.phones__item-demo
+                    img(src=item.imgSrc alt="demo")
+                    img(src="./images/iPhone.svg" alt="iphone border")
+                    img(class="phones__item-demo-glow" src="./images/glow-effect--dark.svg")
+                div.phones__item-text
+                    h3.phones__item-text-title=item.title
+                    p.phones__item-text-description.text-16-400=item.description

@@ -13,7 +13,7 @@
       name: "Platform",
     },
     {
-      to: "#",
+      to: "/product.html",
       name: "Product",
     },
     {
@@ -41,8 +41,9 @@
 header.header
   div.container
     div.header-content
-      include ../../components/logo/logo
-      +logo('header-logo')
+      a(href="/")
+        include ../../components/logo/logo
+        +logo('header-logo')
       button.header-burger
         span
       div.header-nav

@@ -1,0 +1,57 @@
+-
+    var title = "Roadmap";
+    var roadmapCards = [
+        {
+            year: '2022',
+            plans: [
+                {
+                    name: 'Q1',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+                },
+                {
+                    name: 'Q2',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+                },
+                {
+                    name: 'Q3',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+                }
+            ],
+            link: "#",
+        },
+        {
+            year: '2023',
+            plans: [
+                {
+                    name: 'Q1',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+                },
+                {
+                    name: 'Q2',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+                },
+                {
+                    name: 'Q3',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+                }
+            ],
+            link: "#",
+        },
+    ];
+section.section.roadmap
+    h3.section-title=title
+    div.roadmap-container.container
+        button.roadmap-slider__control.roadmap-slider__prev-arrow
+            i.icon-chevron
+        button.roadmap-slider__control.roadmap-slider__next-arrow
+            i.icon-chevron
+        div.roadmap-slider
+            each card in roadmapCards
+                div.roadmap-card.bordered-block
+                    h4.roadmap-card__title=card.year
+                    each plan in card.plans
+                        div.roadmap-card__plan
+                            p.roadmap-card__plan-name.text-16-400=plan.name
+                            p.roadmap-card__plan-text.text-14-400=plan.text
+                    a(class="roadmap-card__link text-14-400" href=card.link target="_blank") Learn more
+

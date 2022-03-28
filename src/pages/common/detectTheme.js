@@ -3,16 +3,15 @@ function detectTheme() {
   const themeFromLocalStorage = localStorage.getItem('theme');
 
   if (themeFromLocalStorage) {
-    if (themeFromLocalStorage === 'dark') {
-      theme = 'dark';
+    if (themeFromLocalStorage === 'dark' || themeFromLocalStorage === 'light') {
+      theme = themeFromLocalStorage;
     }
-    document.body.setAttribute('data-theme', theme);
   } else {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       theme = 'dark';
     }
-    document.body.setAttribute('data-theme', theme);
   }
+  document.body.setAttribute('data-theme', theme);
 }
 
 detectTheme();

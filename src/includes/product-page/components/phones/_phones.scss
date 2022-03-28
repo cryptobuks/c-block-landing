@@ -1,0 +1,118 @@
+body[data-theme="dark"] {
+    .phones__item-text-title {
+        background-image: var(--primary-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+body[data-theme="light"] {
+    .phones__item-demo-glow {
+        display: none;
+    }
+}
+
+.phones-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.phones {
+    & {
+        overflow: hidden;
+    }
+
+    &>.container {
+        max-width: 720px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &:not(:last-child) {
+            margin-bottom: 100px;
+        }
+
+        @include for-desktop-sm {
+            flex-direction: row;
+            margin-bottom: 50px;
+
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+
+                &> :first-child {
+                    margin-left: 100px;
+                }
+            }
+
+            &:nth-child(odd) {
+                &> :first-child {
+                    margin-right: 100px;
+                }
+            }
+        }
+    }
+
+    &__item-demo {
+        position: relative;
+        min-width: 261px;
+        min-height: 528px;
+
+        & :first-child {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            display: block;
+        }
+
+        & :nth-child(2) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            display: block;
+        }
+    }
+
+    &__item-demo-glow {
+        position: absolute;
+        z-index: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.5);
+        min-height: 500px;
+        min-width: 500px;
+    }
+
+    &__item-text {
+        text-align: center;
+
+        @include for-desktop-sm {
+            text-align: left;
+        }
+    }
+
+    &__item-text-title {
+        margin-bottom: 10px;
+
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 48px;
+        color: var(--phones-text-title-color);
+
+        @include for-desktop-sm {
+            margin-bottom: 23px;
+            font-size: 36px;
+        }
+    }
+
+    &__item-text-description {
+        color: var(--phones-text-description-color);
+    }
+}

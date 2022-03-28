@@ -1,0 +1,60 @@
+body[data-theme="dark"] {
+    .bg-lines-1__light,
+    .bg-lines-2__light,
+    .bg-lines-3__light {
+        display: none;
+    }
+}
+
+body[data-theme="light"] {
+    .bg-lines-1__dark,
+    .bg-lines-2__dark,
+    .bg-lines-3__dark {
+        display: none;
+    }
+}
+
+.bg-lines-1__dark,
+.bg-lines-1__light {
+    display: none;
+
+    @include for-desktop-sm {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+}
+
+.bg-lines-2__dark,
+.bg-lines-2__light {
+    display: none;
+
+    @include for-desktop-sm {
+        position: absolute;
+        top: 2500px;
+        left: 50%;
+        transform: translateX(-50%) matrix(-1, 0, 0, 1, 0, 0);
+        z-index: 1;
+        display: block;
+        opacity: 0.7;
+    }
+}
+
+.bg-lines-3__dark,
+.bg-lines-3__light {
+    display: none;
+
+    @include for-desktop-sm {
+        position: absolute;
+        top: 3550px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        display: block;
+        opacity: 0.7;
+
+    }
+}
