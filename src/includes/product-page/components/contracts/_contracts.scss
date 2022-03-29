@@ -4,15 +4,13 @@
         font-size: 24px;
         line-height: 32px;
 
-        max-width: 1000px;
-
         @include for-desktop-sm {
             font-size: 36px;
             line-height: 48px;
         }
     }
 
-    margin-top: 150px;
+    margin-top: 50px;
 
     @include for-desktop-sm {
         margin-top: -100px;
@@ -24,7 +22,9 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
     margin-top: 32px;
+    max-width: 1140px;
 
     @include for-desktop-sm {
         margin-top: 62px;

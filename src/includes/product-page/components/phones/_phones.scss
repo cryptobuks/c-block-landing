@@ -69,6 +69,11 @@ body[data-theme="light"] {
             left: 0;
             z-index: 1;
             display: block;
+
+            height: calc(100% - 5px);
+            width: calc(100% - 10px);
+            transform: translate(10px, 5px);
+            border-radius: 45px;
         }
 
         & :nth-child(2) {

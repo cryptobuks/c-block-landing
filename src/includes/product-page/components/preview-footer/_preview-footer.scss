@@ -1,0 +1,42 @@
+body[data-theme="dark"] {
+    .preview-footer {
+        background: #191A1DB5;
+    }
+}
+
+body[data-theme="light"] {
+    .preview-footer {
+        background: #DAE3F5D4;
+    }
+}
+
+.preview-footer {
+    transform: translateY(0);
+
+    &-content {
+        margin: 0 auto;
+        max-width: 550px;
+        white-space: break-spaces;
+        text-align: center;
+        color: var(--section-description);
+    }
+
+    & > .section-title {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 30px;
+    }
+}
+
+@include for-desktop-sm {
+    .preview-footer {
+        transform: translateY(-66%);
+        z-index: 1;
+
+        & > .section-title {
+            font-size: 36px;
+            line-height: 48px;
+        }
+    }
+}
