@@ -31,6 +31,7 @@ body[data-theme="light"] {
 
 @include for-desktop-sm {
     .preview-footer {
+        position: relative;
         transform: translateY(-66%);
         z-index: 1;
 

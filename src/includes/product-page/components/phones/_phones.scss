@@ -21,7 +21,7 @@ body[data-theme="light"] {
 
 .phones {
     & {
-        overflow: hidden;
+        overflow-x: clip;
     }
 
     &>.container {
@@ -93,6 +93,9 @@ body[data-theme="light"] {
         transform: translate(-50%, -50%) scale(1.5);
         min-height: 500px;
         min-width: 500px;
+
+        user-select: none;
+        pointer-events: none;
     }
 
     &__item-text {

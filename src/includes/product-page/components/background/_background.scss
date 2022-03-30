@@ -24,6 +24,9 @@ body[data-theme="light"] {
 
         object-fit: cover;
         width: 100%;
+
+        pointer-events: none;
+        user-select: none;
     }
 }
 
