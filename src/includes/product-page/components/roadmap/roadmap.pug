@@ -2,40 +2,47 @@
     var title = "Roadmap";
     var roadmapCards = [
         {
+            year: '2021',
+            plans: [
+                {
+                    name: 'Complete',
+                    text: 'Celo Grant',
+                },
+            ],
+        },
+        {
             year: '2022',
             plans: [
                 {
-                    name: 'Q1',
-                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+                    name: 'In Progress',
+                    text: 'Seed Funding',
                 },
                 {
-                    name: 'Q2',
-                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+                    name: 'In Progress',
+                    text: 'Valora Wallet Integration',
                 },
                 {
-                    name: 'Q3',
-                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+                    name: 'In Progress',
+                    text: 'c-DEX Manager® - Yield Farms',
+                },
+                {
+                    name: 'In Progress',
+                    text: 'Celo Wrapper® - 1:1 Token Wrapping',
+                },
+                {
+                    name: 'In Progress',
+                    text: 'Industry Specific Strategic Partnerships',
                 }
             ],
-            link: "#",
         },
         {
             year: '2023',
             plans: [
                 {
-                    name: 'Q1',
-                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+                    name: 'In progress',
+                    text: 'c-PORT® Integration / Licensing',
                 },
-                {
-                    name: 'Q2',
-                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
-                },
-                {
-                    name: 'Q3',
-                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
-                }
             ],
-            link: "#",
         },
     ];
 section.section.roadmap
@@ -53,5 +60,3 @@ section.section.roadmap
                         div.roadmap-card__plan
                             p.roadmap-card__plan-name.text-16-400=plan.name
                             p.roadmap-card__plan-text.text-14-400=plan.text
-                    a(class="roadmap-card__link text-14-400" href=card.link target="_blank") Learn more
-
