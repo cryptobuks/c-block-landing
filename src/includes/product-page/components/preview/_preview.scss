@@ -39,10 +39,14 @@
         border-radius: 120px;
         background: var(--primary-gradient);
         color: var(--preview-grey-5);
-        transition: background-color var(--default-transition-ms), color var(--default-transition-ms);
+        transition: background var(--default-transition-ms), color var(--default-transition-ms), opacity var(--default-transition-ms);
 
         &:not(:last-child) {
             margin-right: 20px;
+        }
+
+        &:hover {
+            opacity: 0.8;
         }
 
         &_outlined {
@@ -86,7 +90,7 @@
     .preview-container {
         display: flex;
         height: 100%;
-        margin-top: 80px !important;
+        margin-top: 80px;
         z-index: 1;
     }
 

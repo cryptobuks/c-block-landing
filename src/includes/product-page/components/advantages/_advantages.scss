@@ -1,8 +1,7 @@
 .advantages {
     & {
-        margin-bottom: 60px;
         @include for-desktop-sm {
-            margin-bottom: 230px !important;
+            margin-bottom: 230px;
         }
     }
 

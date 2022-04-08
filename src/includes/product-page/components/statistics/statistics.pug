@@ -1,0 +1,15 @@
+mixin statistics(className = '')
+    section(class="container statistics " +className)
+        div.statistics__content
+            div.statistics-box
+                include ../../../../components/icons/crosshair/crosshair
+                +crosshair('statistics-box__content-img')
+                div.statistics-box__content
+                    div.statistics-box__content-amount.text-20-600
+                    div.statistics-box__content-title.text-14-400 Users
+            div.statistics-box
+                include ../../../../components/icons/files/files
+                +files('statistics-box__content-img')
+                div.statistics-box__content
+                    div.statistics-box__content-amount.text-20-600
+                    div.statistics-box__content-title.text-14-400 Contracts

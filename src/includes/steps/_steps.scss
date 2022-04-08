@@ -22,6 +22,10 @@ body[data-theme="light"] .step-icon-path {
 
 .steps {
   position: relative;
+
+  &.section {
+    margin-bottom: 30px;
+  }
 }
 
 .step-content {
