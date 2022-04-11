@@ -1,21 +1,35 @@
 function burger() {
   const burger = document.querySelector(".header-burger");
   const header = document.querySelector(".header");
+  const headerMenuMobile = document.querySelector(".header-menu-mobile");
 
-  if (burger && header) {
+  const openMenu = () => {
+    burger.classList.add("active");
+    header.classList.add("open");
+    window.bodyScrollLock.disableBodyScroll(document.body, {
+      allowTouchMove: () => true,
+    });
+  };
+  const closeMenu = () => {
+    burger.classList.remove("active");
+    header.classList.remove("open");
+    window.bodyScrollLock.enableBodyScroll(document.body);
+  };
+
+  if (burger && header && headerMenuMobile) {
     burger.addEventListener("click", function () {
-      const isMenuOpen = this.classList.contains("active");
+      const isMenuOpen = burger.classList.contains("active");
       if (!isMenuOpen) {
-        this.classList.add("active");
-        header.classList.add("open");
-        window.bodyScrollLock.disableBodyScroll(document.body, {
-          allowTouchMove: () => true,
-        });
+        openMenu();
       } else {
-        this.classList.remove("active");
-        header.classList.remove("open");
-        window.bodyScrollLock.enableBodyScroll(document.body);
+        closeMenu();
       }
+    });
+
+    headerMenuMobile.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        closeMenu();
+      });
     });
   }
 }

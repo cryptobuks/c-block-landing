@@ -74,4 +74,15 @@ main {
     position: relative;
     margin-top: 0;
   }
+
+  & .statistics-box {
+    background: var(--card-bg);
+  }
+}
+
+.statistics-title {
+  position: relative;
+  z-index: 5;
+
+  margin-bottom: 20px;
 }

@@ -47,5 +47,20 @@ function theme() {
   });
 }
 
+function smoothScrollAllAnchorLinks() {
+  document.querySelectorAll('a[href^="/#"]').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const href = e.target.getAttribute('href').replace('/#', '');
+      const anchor = document.querySelector(`a[name="${href}"]`);
+      anchor.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => {
+        window.location.hash= href;
+      }, 100);
+    })
+  });
+}
+
 initParticle(); 
 theme();
+smoothScrollAllAnchorLinks();
