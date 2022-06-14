@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "gulp",
-    "build": "gulp build --output public",
+    "build": "gulp build",
     "fontello": "bash ./fontello.sh"
   },
   "repository": {
